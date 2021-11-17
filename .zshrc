@@ -110,8 +110,15 @@ alias x="kubectx"
 alias ns="kubens"
 export EDITOR=vim
 
+# To change home directory of the Ubuntu-20.04
+#cd ~
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ALIAS COMMANDS
 [[ ! -f $(which exa) ]] && echo "Warning: exa is not installed" || alias ls="exa --icons --group-directories-first"
 export SETTING="/mnt/c/Users/Waiyan\ Win\ Htain/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
